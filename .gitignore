@@ -9,7 +9,7 @@ venv/
 .env/
 
 # Data (private CV content)
-data.json
+data/data.json
 
 # Output files
 output/
