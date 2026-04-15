@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+
+# Data (private CV content)
+data.json
+
+# Output files
+output/
+*.pdf
+*.html
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

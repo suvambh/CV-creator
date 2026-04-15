@@ -1,0 +1,249 @@
+@page {
+    size: A4;
+    margin: 10mm 12mm;
+}
+
+:root {
+    --bg: #ffffff;
+    --panel: #f7f8fc;
+    --cell: #fbfbfe;
+    --text: #1e293b;
+    --muted: #64748b;
+    --line: #cbd5e1;
+    --accent: #4f46e5;
+    --accent-soft: #6366f1;
+    --cell-border: #d6dcef;
+}
+
+html, body {
+    background: var(--bg);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    font-size: 9.7pt;
+    line-height: 1.28;
+}
+
+.page {
+    width: 100%;
+    background: var(--bg);
+}
+
+/* HEADER */
+
+.header {
+    border: 1px solid var(--cell-border);
+    background: linear-gradient(to bottom, #fcfcff, #f6f7fc);
+    padding: 10px 12px 8px 12px;
+    margin-bottom: 10px;
+}
+
+.header-left {
+    float: left;
+    width: 74%;
+}
+
+.header-right {
+    float: right;
+    width: 24%;
+    text-align: right;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 20pt;
+    font-weight: 700;
+    line-height: 1.0;
+    color: var(--text);
+    letter-spacing: 0.1px;
+}
+
+.headline {
+    margin: 4px 0 0 0;
+    font-size: 10pt;
+    color: var(--accent);
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.contact {
+    margin: 5px 0 0 0;
+    font-size: 8.7pt;
+    color: var(--muted);
+    line-height: 1.18;
+}
+
+.profile-pic {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    margin-top: 6px;
+    margin-right: 4px;
+}
+
+/* SECTIONS */
+
+.section {
+    margin-bottom: 8px;
+    page-break-inside: avoid;
+    border: 1px solid var(--cell-border);
+    background: var(--cell);
+    padding: 7px 9px 6px 9px;
+}
+
+.section h2 {
+    margin: 0 0 4px 0;
+    font-size: 9.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.35px;
+    color: var(--accent);
+    font-weight: 700;
+    border-bottom: 0.8px solid var(--line);
+    padding-bottom: 2px;
+}
+
+/* SUMMARY */
+
+.summary {
+    margin: 0;
+    font-size: 9.1pt;
+    color: var(--text);
+    line-height: 1.24;
+}
+
+/* ENTRIES */
+
+.entry {
+    margin-bottom: 5px;
+    page-break-inside: avoid;
+    padding-bottom: 4px;
+    border-bottom: 0.6px solid var(--line);
+}
+
+.entry:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.entry-header {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+.entry-left {
+    display: table-cell;
+    width: 78%;
+    vertical-align: top;
+}
+
+.entry-right {
+    display: table-cell;
+    width: 22%;
+    vertical-align: top;
+    text-align: right;
+    color: var(--muted);
+    font-size: 8.6pt;
+    white-space: nowrap;
+    line-height: 1.15;
+}
+
+.entry h3 {
+    margin: 0;
+    font-size: 10pt;
+    font-weight: 700;
+    line-height: 1.08;
+    color: var(--text);
+}
+
+.subline {
+    margin: 1px 0 0 0;
+    color: var(--muted);
+    font-size: 8.7pt;
+    line-height: 1.12;
+}
+
+.meta-line {
+    margin: 2px 0 0 0;
+    color: var(--accent);
+    font-size: 8.5pt;
+    line-height: 1.12;
+    font-weight: 600;
+}
+
+/* BULLETS */
+
+.bullets {
+    margin: 3px 0 0 14px;
+    padding-left: 0;
+}
+
+.bullets li {
+    margin-bottom: 1px;
+    line-height: 1.18;
+    color: var(--text);
+}
+
+.bullets li::marker {
+    color: var(--accent);
+}
+
+/* SKILLS */
+
+.skills-list {
+    border: 1px solid var(--line);
+    background: var(--panel);
+    padding: 6px 8px;
+}
+
+.skills-list p {
+    margin: 1px 0;
+    font-size: 8.8pt;
+    line-height: 1.14;
+    color: var(--text);
+}
+
+.skills-list strong {
+    color: var(--accent);
+}
+
+/* COMPACT CERTIFICATIONS */
+
+.compact-entry {
+    margin-bottom: 3px;
+    padding-bottom: 2px;
+}
+
+.compact-entry h3 {
+    font-size: 9.3pt;
+    font-weight: 600;
+}
+
+.compact-entry .subline {
+    font-size: 8.5pt;
+}
+
+/* UTILITIES */
+
+.clear {
+    clear: both;
+}
+
+strong {
+    color: var(--text);
+}
+
+/* PDF STABILITY */
+
+p, li {
+    orphans: 2;
+    widows: 2;
+}
